@@ -34,8 +34,8 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team *before* you start
 coding!
 
+- Krishna Yadav (Developer): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
 - Teammate name #1 (Developer): [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Teammate name #2 (Developer): [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
-- Krishna Yadav (Developer): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
 - Louis (Developer): [GitHub](https://github.com/locwa)
 - Pao (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
