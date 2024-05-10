@@ -38,4 +38,4 @@ coding!
 - Sebin Hong (Developer): [GitHub](https://github.com/subsurfmodifier) / [LinkedIn](linkedin.com/in/sebin-hong-867b56291)
 - Teammate name #2 (Developer): [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Louis (Developer): [GitHub](https://github.com/locwa)
-- Pao (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
+- Pao Ying Heng (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
