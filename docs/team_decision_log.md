@@ -8,15 +8,16 @@ To set this up add each teammates name in the `teammate name` column. Each
 team member should Place an 'X' under their name to vote for the ideas 
 you like the best.
 
-| No. | Question/Option | Teammate name | Teammate name | Teammate name | Teammate name | Teammate name | Teammate name |
+| No. | Question/Option | Pao | Sebin | Louis | Krishna | Devim | Teammate name |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Team meeting schedule | | | | | | |
-|   |	- Sprint Planning Sunday@9:00 a.m. CST | | | | | | |
-|   |	- Knowledge Xfer as needed | | | | | | |
-|   |	- Working Session Thursday@4:00 p.m. CST | | | | | | |
+|   |	- Sprint Planning: Sundays |X| | | | | |
+|   |	- Sprint Review & Sprint Retro: Fridays  |X| | | | | |
+|   |	- Sprint Review & Sprint Retro: Saturdays  | | | | | | |
+|   |	- Knowledge transfer as needed | | | | | | |
 | 2	| Project Backlog Tool | | | | | | |
 |   |	- Notion | | | | | | |
-|   |	- Jira | | | | | | |
+|   |	- Jira |X| | | | | |
 | 3	| Technical Stack (vote by adding your pref. in the cell under your name) | | | | | | |
 |   |	- BE Language | | | | | | |
 |   |	- FE Language | | | | | | |
@@ -24,6 +25,7 @@ you like the best.
 |   |	- ML Framework | | | | | | |
 |   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | | | | | | |
 | 4	| Where to host the app? | | | | | | |
+|   |	- GitHub Pages |X| | | | | |
 |   |	- Heroku (suitable for FE, BE, & Postgres) | | | | | | |
 |   |	- Netlify (suitable only for FE) | | | | | | |
 |   |	- Vercel (suitable only for FE) | | | | | | |
@@ -35,7 +37,7 @@ you like the best.
 |   |	- Paper & pencil | | | | | | |
 |   |	- Adobe XD | | | | | | |
 |   |	- Balsamiq | | | | | | |
-|   |	- Figma | | | | | | |
+|   |	- Figma |X| | | | | |
 | 7	| Who works in which part of the app? | | | | | | |
 |   | - BE (not applicable for Tier 1 teams) | | | | | | |
 |   |	- FE | | | | | | |
