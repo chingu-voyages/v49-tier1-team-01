@@ -14,16 +14,19 @@ you like the best.
 |   |	- Sprint Planning: Sundays |X| | | | | |
 |   |	- Sprint Review & Sprint Retro: Fridays  |X| | | | | |
 |   |	- Sprint Review & Sprint Retro: Saturdays  | | | | | | |
-|   |	- Knowledge transfer as needed | | | | | | |
+|   |	- Knowledge transfer as needed |X| | | | | |
 | 2	| Project Backlog Tool | | | | | | |
 |   |	- Notion | | | | | | |
 |   |	- Jira |X| | | | | |
 | 3	| Technical Stack (vote by adding your pref. in the cell under your name) | | | | | | |
-|   |	- BE Language | | | | | | |
-|   |	- FE Language | | | | | | |
-|   |	- FE Framework | | | | | | |
-|   |	- ML Framework | | | | | | |
-|   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | | | | | | |
+|   |	Designing | | | | | | |
+|   |	- HTML |X| | | | | |
+|   |	- CSS |X| | | | | |
+|   |	- Bootstrap | | | | | | |
+|   |	JavaScript |X| | | | | |
+|   |	Fetch |X| | | | | |
+|   |	Ajax | | | | | | |
+|   |	Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | | | | | | |
 | 4	| Where to host the app? | | | | | | |
 |   |	- GitHub Pages |X| | | | | |
 |   |	- Heroku (suitable for FE, BE, & Postgres) | | | | | | |
