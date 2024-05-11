@@ -36,7 +36,6 @@ coding!
 
 - Krishna Yadav (Developer): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
 - Sebin Hong (Developer): [GitHub](https://github.com/subsurfmodifier) / [LinkedIn](linkedin.com/in/sebin-hong-867b56291)
-- Teammate name #2 (Developer): [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Louis (Developer): [GitHub](https://github.com/locwa)
 - Pao Ying Heng (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
 - Devim (Developer): [Github](https://github.com/devimalka) / [Twitter](https://twitter.com/d3v1m)
