@@ -16,7 +16,6 @@ you like the best.
 |   |	- Sprint Review & Sprint Retro: Saturdays  | | | | | | |
 |   |	- Knowledge transfer as needed |X| | | | | |
 | 2	| Project Backlog Tool | | | | | | |
-|   |	- Notion | | | | | | |
 |   |	- Jira |X| | | | | |
 | 3	| Technical Stack (vote by adding your pref. in the cell under your name) | | | | | | |
 |   |	Designing | | | | | | |
@@ -42,7 +41,6 @@ you like the best.
 |   |	- Balsamiq | | | | | | |
 |   |	- Figma |X| | | | | |
 | 7	| Who works in which part of the app? | | | | | | |
-|   | - BE (not applicable for Tier 1 teams) | | | | | | |
-|   |	- FE | | | | | | |
+|   | ... | | | | | | |
 | 8	| ... | | | | | | |
 | n | ... | | | | | | |
