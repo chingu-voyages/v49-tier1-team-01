@@ -39,3 +39,4 @@ coding!
 - Teammate name #2 (Developer): [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Louis (Developer): [GitHub](https://github.com/locwa)
 - Pao Ying Heng (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
+- Devim (Developer): [Github](https://github.com/devimalka) / [Twitter](https://twitter.com/d3v1m)
