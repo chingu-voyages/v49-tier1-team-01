@@ -34,7 +34,7 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team *before* you start
 coding!
 
-- Krishna Yadav (Dev): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
+- Krishna Yadav (Developer): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
 - Sebin Hong (Developer): [GitHub](https://github.com/subsurfmodifier) / [LinkedIn](linkedin.com/in/sebin-hong-867b56291)
 - Louis (Developer): [GitHub](https://github.com/locwa)
 - Pao Ying Heng (Product Owner): [GitHub](https://github.com/paoyingheng) / [LinkedIn](https://linkedin.com/in/paoyingheng)
