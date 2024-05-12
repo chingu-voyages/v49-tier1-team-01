@@ -46,11 +46,14 @@
 }
 
 footer{
-    position: sticky;
-    bottom: 0;
     margin: 0;
-    background-color: white;
-    height: 6vh;
+    background-color: rgb(184, 184, 184);
+    height: 20vh;
+
+}
+
+.footer-text{
+    padding: 8vh 0;
 }
 
 a{
