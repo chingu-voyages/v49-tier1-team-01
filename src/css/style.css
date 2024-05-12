@@ -4,8 +4,8 @@
 
 .color-wheel-placeholder{
     margin: auto;
-    height: 20vw;
-    width: 20vw;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     background-color: white;
     margin-bottom: 20px;
@@ -19,7 +19,7 @@
 }
 
 .hex-code-input{
-    width: 12vw;
+    width: 200px;
     padding: 10px 0;
     border-radius: 10px;
 }
@@ -36,24 +36,24 @@
 
 .color-box{
     border: 1px black solid;
-    height: 10vw;
-    width: 13vw;
+    height: 150px;
+    width: 200px;
 }
 
 .hex-code{
     background-color: rgb(184, 184, 184);
     padding: 7px 0;
+    width: 150px;
 }
 
 footer{
     margin: 0;
     background-color: rgb(184, 184, 184);
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-}
-
-.footer-text{
-    padding: 8vh 0;
 }
 
 a{
