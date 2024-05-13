@@ -7,5 +7,5 @@ var colorPicker = new iro.ColorPicker("#picker", {
   });
   
 
-var hex = colorPicker.color.hexString;
-console.log(hex);
+// var hex = colorPicker.color.hexString;
+// console.log(hex);
