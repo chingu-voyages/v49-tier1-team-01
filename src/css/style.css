@@ -16,12 +16,14 @@
     background-color: white;
     height: 25px;
     width: 250px;
+
 }
 
 .hex-code-input{
     width: 200px;
     padding: 10px 0;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 .generate-button{
