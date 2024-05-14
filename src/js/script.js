@@ -25,8 +25,34 @@ colorPicker.on(["color:init","color:change"],(color)=>{
   divEle.style.backgroundColor = color.hexString
 
 
-})
+  const brightness = color.hsl
+  console.log(brightness.l)
+  const h2Ele = document.getElementById("h2color")
+  const pEle = document.getElementById("pcolor")
+  if (brightness.l <= 45){
+    console.log("here lightness describes")
+    
+    h2Ele.style.color = "#FFFFF0";
+    pEle.style.color = "#FFFFF0"
+  }
+  else{
+    h2Ele.style.color = "black"
+    pEle.style.color = "black"
+
+  }  
+
+    // console.log(h2Ele.innerHTML)
+    // console.log(pEle)
+
   
+  
+})
+
+// change the color of text when user selects the blackish shades color
+
+
+
+
 
 
 
