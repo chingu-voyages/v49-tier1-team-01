@@ -16,8 +16,9 @@ function App() {
       body: message,
     });
     if (response.ok) {
-      const answer = await response.json();
-      setAnswer(answer);
+      const answerObject = await response.json();
+      const answerArray = Object.entries(answerObject);
+      setAnswer(answerArray);
     }
   }
 
@@ -25,11 +26,15 @@ function App() {
     <div>
       <div>
         <input type="color" onInput={handleInput}/>
-        <button onClick={handleButtonClick}>Submit</button> 
+        <button onClick={handleButtonClick}>Generate</button> 
       </div>
-      { answer }
       <div className='colorContainer'>
-        {answer.map((color, i) => <div key={i} className='colorDiv' style={{ backgroundColor: color }}></div>)}
+        {answer.map((color, i) => 
+          <div>
+            <div key={i} className='colorDiv' style={{ backgroundColor: color[0] }}></div>
+            <div className='textDiv'>{color[0]}</div>
+            <div className='descriptionDiv'>{color[1]}</div>
+          </div>)}
       </div>
     </div>
   );
