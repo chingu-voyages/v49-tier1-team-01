@@ -1,31 +1,36 @@
 import {useState} from 'react'
-
-
+import './App.css'
 
 function App() {
   const [message, setMessage] = useState(null);
-  const [answer, setAnswer] = useState(null);
+  const [answer, setAnswer] = useState([]);
 
   function handleInput(e) {
     setMessage(e.target.value);
   }
-  console.log(message);
-  function handleButtonClick(e) {
+
+  async function handleButtonClick(e) {
     e.preventDefault();
-    fetch('http://localhost:3001',{
+    const response = await fetch('http://localhost:3001',{
       method: 'POST',
       body: message,
-    }).then(async (r) => {
-      const answer = await r.json();
-      setAnswer(answer.message.content);
-    })
+    });
+    if (response.ok) {
+      const answer = await response.json();
+      setAnswer(answer);
+    }
   }
+
   return (
     <div>
-      <input type="color" onInput={handleInput}/>
-      <button onClick={handleButtonClick}>Submit</button>
+      <div>
+        <input type="color" onInput={handleInput}/>
+        <button onClick={handleButtonClick}>Submit</button> 
+      </div>
       { answer }
-      <div style={{ backgroundColor: answer, height: '30px', width: '30px', border: '1px solid' }}></div>
+      <div className='colorContainer'>
+        {answer.map((color, i) => <div key={i} className='colorDiv' style={{ backgroundColor: color }}></div>)}
+      </div>
     </div>
   );
 }
