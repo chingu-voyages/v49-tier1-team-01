@@ -16,12 +16,14 @@
     background-color: white;
     height: 25px;
     width: 250px;
+
 }
 
 .hex-code-input{
     width: 200px;
     padding: 10px 0;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 .generate-button{
@@ -58,4 +60,15 @@ a{
 
 a:hover{
     color: rgb(29, 29, 29);
+}
+
+h2,p {
+    
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
 }
