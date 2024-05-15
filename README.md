@@ -21,11 +21,8 @@ HueHarmony simplifies the process of finding complementary colors by leveraging 
 
 ### Setup Frontend
 ```bash
-# Clone the repository
-git clone https://github.com/chingu-voyages/v49-tier1-team-01.git
-
 # Navigate to the frontend directory
-cd v49-tier1-team-01/frontend
+cd frontend
 
 # Install dependencies
 npm install
@@ -33,7 +30,7 @@ npm install
 ### Setup Backend
 ```bash
 # Navigate to the backend directory
-cd v49-tier1-team-01/backend
+cd backend
 
 # Install dependencies
 npm install
