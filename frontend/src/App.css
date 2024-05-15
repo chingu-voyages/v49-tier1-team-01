@@ -1,0 +1,11 @@
+.colorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.colorDiv {
+  height: 30px;
+  width: 30px; 
+  border: 1px solid;
+}
