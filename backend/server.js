@@ -1,7 +1,8 @@
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
-import main from './index.js'
 import fastifyEnv from '@fastify/env'
+import { closeRedisClient } from './lib/redis.js'
+import router from './router.js'
 
 const fastify = Fastify({
   logger: true
@@ -22,23 +23,19 @@ const options = {
   dotenv: true
 }
 
-await fastify.register(fastifyEnv, options)
-await fastify.register(cors, {})
+await fastify.register(fastifyEnv, options);
+await fastify.register(cors, {});
 
-fastify.get('/', async function handler (request, reply) {
-  return { hello: 'lala' }
-})
+router(fastify);
 
-fastify.post('/', async function handler (request, reply) {
-  const answer = await main(request.body);
-  reply.send(answer);
-})
 
 try {
-  await fastify.listen({ port: 3001 })
+  await fastify.listen({ port: 3001 });
+  await closeRedisClient();
 } catch (err) {
   fastify.log.error(err)
-  process.exit(1)
+  await closeRedisClient();
+  process.exit(1);
 }
 
 
