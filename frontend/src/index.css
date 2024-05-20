@@ -107,8 +107,8 @@ a:hover{
 
   .color-wheel-placeholder{
     margin: auto;
-    height: 390px;
-    width: 390px;
+    height: 18vw;
+    width: 18vw;
     margin-bottom: 40px;
   }
 
@@ -126,14 +126,14 @@ a:hover{
     padding: 10px 0;
     border-radius: 10px;
     margin-top: 10px;
-    height: 50px;
+    height: 2.9vw;
   }
   
   .generate-button{
     background-color: black;
     color: white;
     width: 220px;
-    height: 70px;
+    height: 3vw;
     border-radius: 20px;
     border-color: white;
     border-width: 2px;
