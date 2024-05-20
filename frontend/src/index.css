@@ -6,13 +6,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .bg-color-wheel{
   background-color: rgb(184, 184, 184);
 }
+
+h2, p {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+  }
 
 .color-wheel-placeholder{
   margin: auto;
@@ -76,13 +88,3 @@ a:hover{
   color: rgb(29, 29, 29);
 }
 
-h2,p {
-  
-font-family: "Tilt Neon", sans-serif;
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal;
-font-variation-settings:
-  "XROT" 0,
-  "YROT" 0;
-}
