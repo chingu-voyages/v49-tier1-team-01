@@ -28,6 +28,7 @@ code {
   background-color: white;
   height: 25px;
   width: 250px;
+  border-radius: 20px;
 
 }
 
@@ -35,7 +36,8 @@ code {
   width: 200px;
   padding: 10px 0;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+  height: 40px;
 }
 
 .generate-button{

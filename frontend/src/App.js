@@ -34,9 +34,9 @@ function App() {
                 <p id="pcolor" class="text-center pb-3 px-1">Dress up, decorate, or design with harmonious color coordination — all at your fingertips. Try it now!</p>
             </div>
             <div class="color-wheel-placeholder" id="picker"></div>
-            <div class="slider-placeholdr"></div>
+            <div class="slider-placeholder"></div>
             <div class="pt-4"></div>
-            <div class="text-center mx-auto bg-light hex-code-input" id="hexbox"></div>
+            <div class="text-center mx-auto bg-light hex-code-input" id="hexbox">#FFFFFF</div>
             <div class="pb-4"></div>
             <div class="text-center mx-auto">
                 <button type="button" class="text-center btn generate-button" >Generate</button>
