@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-    <div class="container-xs my-0 px-0">
+    <div class="container-fluid-xs my-0 px-0">
     <header class="container ">
         <h1 class="fw-bold py-2 fs-3">LOGO//APP NAME</h1>
     </header>

@@ -100,3 +100,47 @@ a:hover{
   color: rgb(29, 29, 29);
 }
 
+@media screen and (min-width: 1441px) {
+  html{
+    font-size: x-large;
+  }
+
+  .color-wheel-placeholder{
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 40px;
+  }
+
+  .slider-placeholder{
+    margin: auto;
+    background-color: white;
+    height: 35px;
+    width: 350px;
+    border-radius: 20px;
+  
+  }
+  
+  .hex-code-input{
+    width: 300px;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 60px;
+  }
+  
+  .generate-button{
+    background-color: black;
+    color: white;
+    width: 220px;
+    height: 70px;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 2px;
+  }
+
+  .filler{
+    height: 5vh;
+  }
+  
+}
