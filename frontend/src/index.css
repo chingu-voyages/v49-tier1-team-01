@@ -102,13 +102,13 @@ a:hover{
 
 @media screen and (min-width: 1441px) {
   html{
-    font-size: x-large;
+    font-size: large;
   }
 
   .color-wheel-placeholder{
     margin: auto;
-    height: 400px;
-    width: 400px;
+    height: 390px;
+    width: 390px;
     margin-bottom: 40px;
   }
 
@@ -122,11 +122,11 @@ a:hover{
   }
   
   .hex-code-input{
-    width: 300px;
+    width: 250px;
     padding: 10px 0;
     border-radius: 10px;
     margin-top: 10px;
-    height: 60px;
+    height: 50px;
   }
   
   .generate-button{
