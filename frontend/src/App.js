@@ -45,19 +45,19 @@ function App() {
         </div>
     </main>
     <div class="filler"></div>
-    <div class="suggestions container-fluid text-center pt-5">
+    <div class="container-fluid text-center pt-5">
         <div class="row">
-            <div class="col mx-auto">
+            <div class="suggestions col mx-auto">
                 <div class="color-box mx-auto">// color box here</div>
                 <p class="hex-code my-4 mx-auto">HEX Code</p>
                 <p class="fs-6 description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus nihil tempora numquam quod eos nostrum iusto sit obcaecati beatae distinctio. </p>
             </div>
-            <div class="col mx-auto">
+            <div class="suggestions col mx-auto">
                 <div class="color-box mx-auto">// color box here</div>
                 <p class="hex-code my-4 mx-auto">HEX Code</p>
                 <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, illo impedit hic eum saepe praesentium qui, ipsa nulla quos fugit libero minima natus? </p>
             </div>
-            <div class="col mx-auto">
+            <div class="suggestions col mx-auto">
                 <div class="color-box mx-auto">// color box here</div>
                 <p class="hex-code my-4 mx-auto">HEX Code</p>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde mollitia eum, ad nisi omnis corrupti pariatur ipsa, ullam earum necessitatibus dolores placeat odio nihil?</p>

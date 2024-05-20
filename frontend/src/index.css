@@ -66,6 +66,18 @@ h2, p {
   height: 11vh;
 }
 
+@media screen and (max-width: 425px) {
+  
+  .filler{
+    height: 5vh;
+  }
+
+  .suggestions{
+    min-width: 100%;
+  }
+  
+}
+
 footer{
   margin: 0;
   background-color: rgb(184, 184, 184);
