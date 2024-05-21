@@ -8,15 +8,15 @@ export default async function post(request, reply) {
     model: "gpt-3.5-turbo",
   });
 
-  const answer = JSON.parse(completion.choices[0].message.content);
- 
-  await cacheAnswer(message, answer);
- 
-  reply.send(answer);
-}
-
-async function cacheAnswer(color, answer) {
   const redisClient = await getRedisClient();
+  const cache = await redisClient.HGETALL('cache:color:' + message)
 
-  await redisClient.HSET('cache:color:' + color, answer);
+  if(Object.keys(cache).length > 0) {
+    reply.send(cache);
+  } else {
+    const answer = await JSON.parse(completion.choices[0].message.content);
+    await redisClient.HSET('cache:color:' + message, answer);
+    redisClient.quit();
+    reply.send(answer);
+  }
 }
