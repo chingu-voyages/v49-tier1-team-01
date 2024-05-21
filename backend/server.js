@@ -30,8 +30,13 @@ fastify.get('/', async function handler (request, reply) {
 })
 
 fastify.post('/', async function handler (request, reply) {
-  const answer = await main(request.body);
-  reply.send(answer);
+  const hexcodeRegex = /^#[a-fA-F0-9]{6}$/;
+  if(hexcodeRegex.test(request.body)) {
+    const answer = await main(request.body);
+    reply.send(answer);
+  } else {
+    console.log('input is wrong');
+  }
 })
 
 try {
