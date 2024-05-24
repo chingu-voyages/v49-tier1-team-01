@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // import Color from './Color';
 import Home from "./Home"
 
@@ -7,8 +7,10 @@ import iro from '@jaames/iro';
 
 
 export default function Iro(props){
-    const col = props.selectedColor;
+    const col = props.selectedcolor;
     const colorPickerRef = useRef(null);
+    // const [colorNew,setcolorNew] = useState("black");
+    // const colorNew = useRef("#FFFFF0")
     let colorPicker;
     
     useEffect(
@@ -39,8 +41,23 @@ export default function Iro(props){
         {
                 colorPicker.on(['color:change'], (col) => {
                 props.onColorChange(col.hexString);
-                // document.body.style.backgroundColor = color.hexString
-            });
+                // console.log("col value ",col)
+                if (col.hsl.l <= 45)
+                  {
+                    console.log("herr col.l is less than 45",col.hsl.l)
+                    const ele = document.querySelector("#colortext")
+                    console.log("ele",ele)
+                    ele.style.color = "#FFFFF0"
+                  }
+                  else{
+                    console.log("not less than 45",col.hsl.l)
+                    const ele = document.querySelector("#colortext")
+                    console.log("ele",ele)
+                    ele.style.color = "black"
+                    
+                  }
+               
+              });
             
         }
         
@@ -49,7 +66,7 @@ export default function Iro(props){
 
   return (
     // <Color colorPickerRef={colorPickerRef}/>
-    <Home colorPickerRef={colorPickerRef} color={col}/>
+    <Home colorPickerRef={colorPickerRef} color={col} />
 
    
   );

@@ -9,7 +9,7 @@ export default function Home(props) {
       </header>
       <main className="bg-color-wheel container-xs mx-0">
         <div className="color-wheel" id="changecolor" style={{backgroundColor:props.color}}>
-          <div id="colortext">
+          <div id="colortext" >
             <h2 id="h2color" className="text-center fw-medium pt-5 pb-1">
               Harmonize Your Hues — Effortlessly
             </h2>

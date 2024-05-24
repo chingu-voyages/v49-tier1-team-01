@@ -11,10 +11,14 @@ export default function App() {
 
   const [selectedColor, setSelectedColor] = useState("#f00");
 
-const  handleColorChange = (color)=>
+const  handleColorChange = (choosenColor)=>
   {
-    setSelectedColor(color);
-    console.log(color)
+    console.log("color before set",choosenColor)
+    setSelectedColor(choosenColor);
+    console.log("the color hex changes",choosenColor);
+    // console.log("colorhsl",selectedColor.hsl)
+
+    
   }
 
 
@@ -25,7 +29,7 @@ const  handleColorChange = (color)=>
   // async function handleButtonClick(e) {
   //   e.preventDefault();
   //   const response = await fetch('http://localhost:3001',{
-  //     method: 'POST',
+  //     method: 'POST',  
   //     body: message,
   //   });
   //   if (response.ok) {
