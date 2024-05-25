@@ -11,7 +11,7 @@ function App() {
 
   async function handleButtonClick(e) {
     e.preventDefault();
-    const response = await fetch('http://localhost:3001',{
+    const response = await fetch( process.env.REACT_APP_FETCH_URL ,{
       method: 'POST',
       body: message,
     });
