@@ -9,9 +9,9 @@ export default function App() {
 
   // const [answer, setAnswer] = useState([]);
 
-  const [selectedColor, setSelectedColor] = useState("#f00");
+  const [selectedColor, setSelectedColor] = useState("#fad9ff");
 
-const  handleColorChange = (choosenColor)=>
+const  handleColorChange = (choosenColor) =>
   {
     console.log("color before set",choosenColor)
     setSelectedColor(choosenColor);
