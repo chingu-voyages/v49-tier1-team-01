@@ -12,11 +12,19 @@ code {
     monospace;
 }
 
-.bg-color-wheel{
+.bg-color-wheel {
   background-color: rgb(184, 184, 184);
 }
 
-h2, p {
+.bg-color-wheel-container-xs-mx-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2,
+p {
   font-family: "Tilt Neon", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -24,27 +32,9 @@ h2, p {
   font-variation-settings:
     "XROT" 0,
     "YROT" 0;
-  }
-
-.color-wheel-placeholder{
-  margin: auto;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  background-color: white;
-  margin-bottom: 20px;
 }
 
-.slider-placeholder{
-  margin: auto;
-  background-color: white;
-  height: 25px;
-  width: 250px;
-  border-radius: 20px;
-
-}
-
-.hex-code-input{
+.hex-code-input {
   width: 200px;
   padding: 10px 0;
   border-radius: 10px;
@@ -52,7 +42,7 @@ h2, p {
   height: 40px;
 }
 
-.generate-button{
+.generate-button {
   background-color: black;
   color: white;
   width: 200px;
@@ -62,74 +52,54 @@ h2, p {
   border-width: 2px;
 }
 
-.filler{
+.filler {
   height: 11vh;
 }
 
 @media screen and (max-width: 425px) {
-  
-  .filler{
+
+  .filler {
     height: 5vh;
   }
 
-  .suggestions{
+  .suggestions {
     min-width: 100%;
   }
-  
+
 }
 
-footer{
+footer {
   margin: 0;
   background-color: rgb(184, 184, 184);
-  height: 20vh;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
-.footer-text{
-  padding: 0 5px;
-}
-
-a{
+a {
   color: black;
 }
 
-a:hover{
+a:hover {
   color: rgb(29, 29, 29);
 }
 
 @media screen and (min-width: 1441px) {
-  html{
+  html {
     font-size: large;
   }
 
-  .color-wheel-placeholder{
-    margin: auto;
-    height: 18vw;
-    width: 18vw;
-    margin-bottom: 40px;
-  }
-
-  .slider-placeholder{
-    margin: auto;
-    background-color: white;
-    height: 35px;
-    width: 350px;
-    border-radius: 20px;
-  
-  }
-  
-  .hex-code-input{
+  .hex-code-input {
     width: 250px;
     padding: 10px 0;
     border-radius: 10px;
     margin-top: 10px;
     height: 2.9vw;
   }
-  
-  .generate-button{
+
+  .generate-button {
     background-color: black;
     color: white;
     width: 220px;
@@ -139,13 +109,14 @@ a:hover{
     border-width: 2px;
   }
 
-  .filler{
+  .filler {
     height: 5vh;
   }
-  
+
 }
+
 @media screen and (min-width: 2000px) {
-  html{
+  html {
     font-size: x-large;
   }
 }
