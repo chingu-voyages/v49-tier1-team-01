@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import Header from './components/header';
 import MainContent from './components/main-content';
 import iro from '@jaames/iro';
@@ -6,12 +6,14 @@ import Card from './components/card';
 import Footer from './components/footer';
 
 export default function App() {
-  const colorPickerRef = useRef(null);
-  const colorPickerInitialized = useRef(false); 
-  const [colorPicker, setColorPicker] = useState(null);
-  const [bgColor, setBgColor] = useState("#ffc069");
+  const [message, setMessage] = React.useState('');
+  const [answer, setAnswer] = React.useState([]);
+  const colorPickerRef = React.useRef(null);
+  const colorPickerInitialized = React.useRef(false); 
+  const [colorPicker, setColorPicker] = React.useState(null);
+  const [bgColor, setBgColor] = React.useState("#ffc069");
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
         width: 250,
@@ -31,11 +33,28 @@ export default function App() {
     }
   }, [colorPickerRef]);
 
+    function handleInput(e) {
+      setMessage(bgColor);
+    }
+    
+    async function handleButtonClick(e) {
+      e.preventDefault();
+      const response = await fetch('http://localhost:3001',{
+        method: 'POST',  
+        body: message,
+      });
+      if (response.ok) {
+        const answerObject = await response.json();
+        const answerArray = Object.entries(answerObject);
+        setAnswer(answerArray);
+      }
+    }
+
   return (
     <div>
       <Header />
-      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} />
-      <Card />
+      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
+      <Card answer={answer} />
       <Footer backgroundColor={bgColor} />
     </div>
   );

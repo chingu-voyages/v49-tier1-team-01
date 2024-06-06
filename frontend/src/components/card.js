@@ -1,40 +1,35 @@
-export default function Card() {
+export default function Card(props) {
+  if(props.answer.length == 0) {
+    return <div></div>;
+  }
   return (
     <div>
-      <div className="filler"></div>
-      <div className="container-fluid text-center pt-5">
-        <div className="row">
-          <div className="suggestions col mx-auto">
-            <div className="color-box mx-auto">color box here</div>
-            <p className="hex-code my-4 mx-auto">HEX Code</p>
-            <p className="fs-6 description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus nihil tempora numquam quod eos nostrum iusto sit
-              obcaecati beatae distinctio.
-            </p>
-          </div>
-          <div className="suggestions col mx-auto">
-            <div className="color-box mx-auto">color box here</div>
-            <p className="hex-code my-4 mx-auto">HEX Code</p>
-            <p className="description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-              illo impedit hic eum saepe praesentium qui, ipsa nulla quos fugit
-              libero minima natus?
-            </p>
-          </div>
-          <div className="suggestions col mx-auto">
-            <div className="color-box mx-auto">color box here</div>
-            <p className="hex-code my-4 mx-auto">HEX Code</p>
-            <p className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              mollitia eum, ad nisi omnis corrupti pariatur ipsa, ullam earum
-              necessitatibus dolores placeat odio nihil?
-            </p>
-          </div>
+    <div className="container-fluid text-center pt-5">
+      <div className="row">
+        <div className="suggestions col mx-auto">
+          <div className="color-box-mx-auto" style={{backgroundColor : props.answer[0][0]}}></div>
+          <p className="hex-code my-4 mx-auto">{props.answer[0][0]}</p>
+          <p className="fs-6 description">
+            {props.answer[0][1]}
+          </p>
+        </div>
+        <div className="suggestions col mx-auto">
+          <div className="color-box-mx-auto" style={{backgroundColor : props.answer[1][0]}}></div>
+          <p className="hex-code my-4 mx-auto">{props.answer[1][0]}</p>
+          <p className="description">
+            {props.answer[1][1]}
+          </p>
+        </div>
+        <div className="suggestions col mx-auto">
+          <div className="color-box-mx-auto" style={{backgroundColor : props.answer[2][0]}}></div>
+          <p className="hex-code my-4 mx-auto">{props.answer[2][0]}</p>
+          <p className="description">
+          {props.answer[2][1]}
+          </p>
         </div>
       </div>
-      <div className="filler"></div>
     </div>
+  </div>
   )
 }
 

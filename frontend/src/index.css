@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.color-box-mx-auto {
+  height: 70px
+}
+
 .bg-color-wheel {
   background-color: rgb(184, 184, 184);
 }
@@ -75,7 +79,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 a {
