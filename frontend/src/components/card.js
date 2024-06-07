@@ -1,5 +1,7 @@
+import React from 'react'
+
 export default function Card(props) {
-  if(props.answer.length == 0) {
+  if(props.answer.length === 0) {
     return <div></div>;
   }
   return (
