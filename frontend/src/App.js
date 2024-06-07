@@ -8,8 +8,11 @@ import Footer from './components/footer';
 export default function App() {
   const [message, setMessage] = React.useState('');
   const [answer, setAnswer] = React.useState([]);
+
   const colorPickerRef = React.useRef(null);
+
   const colorPickerInitialized = React.useRef(false); 
+  
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
 
