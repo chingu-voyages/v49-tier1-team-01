@@ -6,14 +6,9 @@ import Card from './components/card';
 import Footer from './components/footer';
 
 export default function App() {
-  const [message, setMessage] = React.useState('');
   const [answer, setAnswer] = React.useState([]);
-
   const colorPickerRef = React.useRef(null);
-
-<<<<<<< HEAD
   const colorPickerInitialized = React.useRef(false); 
-  
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
 
@@ -36,34 +31,18 @@ export default function App() {
       colorPickerInitialized.current = true;
     }
   }, [colorPickerRef]);
-
-    function handleInput(e) {
-      setMessage(bgColor);
-    }
     
     async function handleButtonClick(e) {
       e.preventDefault();
-      const response = await fetch('http://localhost:3001',{
+      const response = await fetch(process.env.REACT_APP_FETCH_URL,{
         method: 'POST',  
-        body: message,
+        body: bgColor,
       });
       if (response.ok) {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
       }
-=======
-  async function handleButtonClick(e) {
-    e.preventDefault();
-    const response = await fetch( process.env.REACT_APP_FETCH_URL ,{
-      method: 'POST',
-      body: message,
-    });
-    if (response.ok) {
-      const answerObject = await response.json();
-      const answerArray = Object.entries(answerObject);
-      setAnswer(answerArray);
->>>>>>> 9234753f293ef253dc93118d14246f5b673461f8
     }
 
   return (
