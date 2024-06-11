@@ -11,6 +11,7 @@ export default function App() {
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
+  const [errorMessage, setErrorMessage] = React.useState('');
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
@@ -42,6 +43,8 @@ export default function App() {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
+      } else {
+        setErrorMessage(response.statusText)
       }
     }
 
