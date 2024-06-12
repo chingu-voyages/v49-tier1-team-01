@@ -33,20 +33,28 @@ export default function App() {
       colorPickerInitialized.current = true;
     }
   }, [colorPickerRef]);
+
+  
     
     async function handleButtonClick(e) {
       setErrorMessage('')
       e.preventDefault();
-      const response = await fetch(process.env.REACT_APP_FETCH_URL,{
+      try {
+        const response = await fetch("https://problematic-server.vercel.app/",{
         method: 'POST',  
         body: bgColor,
       });
-      if (response.ok) {
+
+      if (response.status >= 200 && response.status < 300) {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
       } else {
-        setErrorMessage(response.statusText)
+        const errorMessage = await response.statusText(); 
+        setErrorMessage(errorMessage);
+      }}
+       catch (error) {
+        setErrorMessage(`Fetch error: ${error.message}`);
       }
     }
 
