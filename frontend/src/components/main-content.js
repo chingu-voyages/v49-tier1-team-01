@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 
-const MainContent = forwardRef((props, ref) => {
+const MainContent = (props) => {
   return (
-    <div ref = {props.scrollToNextSectionRef}
+    <div
     className="bg-color-wheel-container-xs-mx-0" style={{backgroundColor : props.backgroundColor}}>
       <div className="color-picker-box" ref={props.colorPicker}></div>
       <div>
@@ -17,7 +17,7 @@ const MainContent = forwardRef((props, ref) => {
     </div>
 
   )
-})
+}
 
 export default MainContent;
 

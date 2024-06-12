@@ -74,7 +74,6 @@ export default function App() {
     }
 
    function onClickScroll(){
-      console.log(scrollToNextSectionRef);
       if (scrollToNextSectionRef.current) {
        scrollToNextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
       }
@@ -83,7 +82,9 @@ export default function App() {
   return (
     <div id="page">
       <Header onClickScroll={onClickScroll} />
-      <MainContent scrollToNextSectionRef={scrollToNextSectionRef} backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
+      <div ref={scrollToNextSectionRef}>
+        <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
+      </div>
       <Card ref={cardRef} answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`}  />
       <ErrorWindow errorMessage={errorMessage}/>
       <Footer backgroundColor={bgColor} />

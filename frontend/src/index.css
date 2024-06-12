@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: antiquewhite;
+  background-color: white;
 }
 /* oval button in header  */
 .oval-btn {
@@ -18,6 +18,16 @@ body {
   margin-top: 12px;
   
 }
+
+.description {
+  font-family: Arial;
+}
+
+.description-box {
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-container {
   display: flex;
   /* background-color: DodgerBlue; */
