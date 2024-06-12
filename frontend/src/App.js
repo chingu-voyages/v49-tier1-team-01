@@ -53,7 +53,7 @@ export default function App() {
     }
 
   return (
-    <div id="page" class="hidden">
+    <div id="page">
       <Header />
       <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card answer={answer} />
