@@ -192,7 +192,6 @@ a:hover {
   }
 }
 
-
 .slide-down {
   overflow: hidden;
   transition: max-height 3s ease-out;
@@ -212,4 +211,3 @@ a:hover {
   animation: fadeIn 2s ease-in-out; 
   opacity: 1; 
 }
-

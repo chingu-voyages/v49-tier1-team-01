@@ -25,6 +25,13 @@ export default function App() {
   }, []);
 
   React.useEffect(() => {
+    const page = document.getElementById('page')
+    if(page) {
+      page.classList.add('fade-in')
+    }
+  }, []);
+
+  React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
 
