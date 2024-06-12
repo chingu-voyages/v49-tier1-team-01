@@ -13,6 +13,13 @@ export default function App() {
   const [bgColor, setBgColor] = React.useState("#f7f7ed");
 
   React.useEffect(() => {
+    const page = document.getElementById('page')
+    if(page) {
+      page.classList.add('fade-in')
+    }
+  }, []);
+
+  React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
         width: 250,
@@ -46,7 +53,7 @@ export default function App() {
     }
 
   return (
-    <div>
+    <div id="page" class="hidden">
       <Header />
       <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card answer={answer} />
