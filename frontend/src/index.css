@@ -62,6 +62,10 @@ p {
   border-color: black;
 }
 
+.color-picker-box {
+  padding: 20px;
+}
+
 .filler {
   height: 11vh;
 }
