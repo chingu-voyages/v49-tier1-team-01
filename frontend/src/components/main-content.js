@@ -20,7 +20,7 @@ export default function MainContent(props) {
         <div className="text-center mx-auto bg-light hex-code-input"id="hexbox">{props.backgroundColor}</div>
         <div className="pb-4"></div>
         <div className="text-center mx-auto">
-          <button type="button" className="text-center btn generate-button" onClick={props.button}>Generate</button>
+          <button type="button" className="generate-button" onClick={props.button}>Generate</button>
         </div>
         <div className="pb-4"></div>
       </div>

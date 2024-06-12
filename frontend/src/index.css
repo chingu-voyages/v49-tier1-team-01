@@ -56,6 +56,12 @@ p {
   border-width: 2px;
 }
 
+.generate-button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
 .filler {
   height: 11vh;
 }
