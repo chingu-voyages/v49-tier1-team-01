@@ -5,7 +5,7 @@ export default function Card(props) {
     return <div></div>;
   }
   return (
-    <div>
+    <div className={props.className}>
     <div className="container-fluid text-center pt-5">
       <div className="row">
         <div className="suggestions col mx-auto">

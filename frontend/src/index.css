@@ -123,3 +123,14 @@ a:hover {
     font-size: x-large;
   }
 }
+
+.slide-down {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 3s ease-out;
+  padding: 0 1rem;
+}
+
+.slide-down.expanded {
+  max-height: 500px;
+}

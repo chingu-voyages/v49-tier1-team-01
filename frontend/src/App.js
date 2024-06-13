@@ -11,6 +11,11 @@ export default function App() {
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
+  const [slidedown, setSlidedown] = React.useState(false);
+
+  const toggleButton = () => {
+    setSlidedown(!slidedown)
+  }
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
@@ -44,12 +49,13 @@ export default function App() {
         setAnswer(answerArray);
       }
     }
+  
 
   return (
     <div>
       <Header />
-      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
-      <Card answer={answer} />
+      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} toggleButton={toggleButton}/>
+      <Card answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`}/>
       <Footer backgroundColor={bgColor} />
     </div>
   );
