@@ -4,6 +4,7 @@ import MainContent from './components/main-content';
 import iro from '@jaames/iro';
 import Card from './components/card';
 import Footer from './components/footer';
+import ErrorWindow from './components/modal';
 
 export default function App() {
   const [answer, setAnswer] = React.useState([]);
@@ -38,17 +39,28 @@ export default function App() {
       colorPickerInitialized.current = true;
     }
   }, [colorPickerRef]);
+
+  
     
     async function handleButtonClick(e) {
+      setErrorMessage('')
       e.preventDefault();
-      const response = await fetch(process.env.REACT_APP_FETCH_URL,{
+      try {
+        const response = await fetch("https://problematic-server.vercel.app/",{
         method: 'POST',  
         body: bgColor,
       });
-      if (response.ok) {
+
+      if (response.status >= 200 && response.status < 300) {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
+      } else {
+        const errorMessage = await response.statusText(); 
+        setErrorMessage(errorMessage);
+      }}
+       catch (error) {
+        setErrorMessage(`Fetch error: ${error.message}`);
       }
     }
 
@@ -57,6 +69,7 @@ export default function App() {
       <Header />
       <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card answer={answer} />
+      <ErrorWindow errorMessage={errorMessage}/>
       <Footer backgroundColor={bgColor} />
     </div>
   );
