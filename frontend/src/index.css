@@ -134,6 +134,13 @@ a:hover {
   }
 }
 
+
+.slide-down {
+  overflow: hidden;
+  transition: max-height 3s ease-out;
+  padding: 0 1rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -147,3 +154,4 @@ a:hover {
   animation: fadeIn 2s ease-in-out; 
   opacity: 1; 
 }
+

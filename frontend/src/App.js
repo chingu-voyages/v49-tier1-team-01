@@ -11,6 +11,8 @@ export default function App() {
   const colorPickerRef = React.useRef(null);
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
+  const [slidedown, setSlidedown] = React.useState(false);
+  const cardRef = React.useRef(null);
   const [bgColor, setBgColor] = React.useState("#f7f7ed");
   const [errorMessage, setErrorMessage] = React.useState('');
 
@@ -56,6 +58,11 @@ export default function App() {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
+        setSlidedown(true);
+
+        if (cardRef.current) {
+          cardRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
       } else {
         const errorMessage = await response.statusText(); 
         setErrorMessage(errorMessage);
@@ -64,12 +71,13 @@ export default function App() {
         setErrorMessage(`Fetch error: ${error.message}`);
       }
     }
+  
 
   return (
     <div id="page">
       <Header />
       <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
-      <Card answer={answer} />
+      <Card ref={cardRef} answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`}  />
       <ErrorWindow errorMessage={errorMessage}/>
       <Footer backgroundColor={bgColor} />
     </div>
