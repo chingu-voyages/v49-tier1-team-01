@@ -4,7 +4,7 @@ import MainContent from './components/main-content';
 import iro from '@jaames/iro';
 import Card from './components/card';
 import Footer from './components/footer';
-import ErrorWindow from './components/modal';
+import ErrorWindow from './components/modal.js';
 
 export default function App() {
   const [answer, setAnswer] = React.useState([]);
@@ -12,6 +12,7 @@ export default function App() {
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#f7f7ed");
+  const [errorMessage, setErrorMessage] = React.useState('');
 
   React.useEffect(() => {
     const page = document.getElementById('page')
