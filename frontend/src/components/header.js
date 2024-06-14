@@ -2,11 +2,11 @@ import React, { useRef } from 'react'
 
 
 export default function Header(props) {
- 
+
 
 
   return (
-    <header className='container' style={{ fontSize: "10px", padding: "20px", marginBottom: "150px",marginTop:"50px" }}>
+    <header className='container zoom-out' style={{ fontSize: "10px", padding: "20px", marginBottom: "150px", marginTop: "50px" }}>
 
       <img src="../logo.png" style={{ width: "90px", height: "80px", padding: "5px", marginBottom: "30px" }} /><span style={{ fontSize: "65px", marginTop: "10px" }}> HueHarmonie</span>
 

@@ -33,6 +33,21 @@ body {
   margin: 2px;
 }
 
+/* transition effect */
+.zoom-out {
+    animation: zoomOut 1s normal; /* 2 seconds duration */
+  }
+  
+  @keyframes zoomOut {
+    from {
+      transform: scale(0); /* Start at 2x size */
+      opacity: 0;          /* Start fully transparent */
+    }
+    to {
+      transform: scale(1); /* End at normal size */
+      opacity: 1;          /* End fully opaque */
+    }
+  }
 
 
 
