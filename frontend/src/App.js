@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from './components/header';
 import MainContent from './components/main-content';
 import iro from '@jaames/iro';
@@ -11,6 +11,9 @@ export default function App() {
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
+
+  const scrollToNextSectionRef = React.useRef("null");
+
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
@@ -44,11 +47,21 @@ export default function App() {
         setAnswer(answerArray);
       }
     }
+    function onClickScroll(){
+      console.log("hi this is from the onCickScroll");
+      if (scrollToNextSectionRef.current) {
+       scrollToNextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+      console.log(document.getElementById("newHead"));
+      // document.getElementById("newHead")
+      
+
+    }
 
   return (
     <div>
-      <Header />
-      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
+      <Header onClickScroll={onClickScroll}/>
+      <MainContent scrollToNextSectionRef={scrollToNextSectionRef} backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card answer={answer} />
       <Footer backgroundColor={bgColor} />
     </div>
