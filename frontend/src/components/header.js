@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
   return (
     <header className="container ">
-      <h1 className="fw-bold py-2 fs-3">HUEHARMONY</h1>
+      <h1 className="fw-bold py-2 fs-3">HueHarmonie</h1>
     </header>
   )
 }
