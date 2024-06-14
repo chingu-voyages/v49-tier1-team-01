@@ -24,7 +24,6 @@ export default function MainContent(props) {
         </div>
         <div className="pb-4"></div>
       </div>
-      <button onClick={props.toggleButton}>toggle</button>
     </div>
 
   )

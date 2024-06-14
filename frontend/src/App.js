@@ -12,10 +12,7 @@ export default function App() {
   const [colorPicker, setColorPicker] = React.useState(null);
   const [bgColor, setBgColor] = React.useState("#ffc069");
   const [slidedown, setSlidedown] = React.useState(false);
-
-  const toggleButton = () => {
-    setSlidedown(!slidedown)
-  }
+  const cardRef = React.useRef(null);
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
@@ -47,6 +44,11 @@ export default function App() {
         const answerObject = await response.json();
         const answerArray = Object.entries(answerObject);
         setAnswer(answerArray);
+        setSlidedown(true);
+
+        if (cardRef.current) {
+          cardRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   
@@ -54,8 +56,8 @@ export default function App() {
   return (
     <div>
       <Header />
-      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} toggleButton={toggleButton}/>
-      <Card answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`}/>
+      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick}/>
+      <Card ref={cardRef} answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`} />
       <Footer backgroundColor={bgColor} />
     </div>
   );
