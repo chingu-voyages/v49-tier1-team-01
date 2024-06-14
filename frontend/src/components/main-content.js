@@ -2,8 +2,9 @@ import React from 'react';
 
 export default function MainContent(props) {
   return (
-    <div className="bg-color-wheel-container-xs-mx-0" style={{backgroundColor : props.backgroundColor}}>
-      <div className="color-wheel" id="changecolor">
+    <div className="bg-color-wheel-container-xs-mx-0 mt-10" style={{backgroundColor : props.backgroundColor}}>
+      <div className='color-wheel mt-5'></div>
+      {/* <div className="color-wheel" id="changecolor">
         <div id="colortext" >
           <h2 id="h2color" className="text-center fw-medium pt-5 pb-1">
             Harmonize Your Hues — Effortlessly
@@ -13,7 +14,7 @@ export default function MainContent(props) {
             all at your fingertips. Try it now!
           </p>
         </div>
-      </div>
+      </div> */}
       <div ref={props.colorPicker}></div>
       <div>
         <div className="pt-4"></div>

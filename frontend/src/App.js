@@ -15,7 +15,7 @@ export default function App() {
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
-        width: 250,
+        width: 200,
         color: "#f00",
         margin: 20,
         wheelLightness: false,
