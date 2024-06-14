@@ -43,13 +43,11 @@ export default function App() {
     }
   }, [colorPickerRef]);
 
-  
-    
     async function handleButtonClick(e) {
       setErrorMessage('')
       e.preventDefault();
       try {
-        const response = await fetch("https://problematic-server.vercel.app/",{
+        const response = await fetch(process.env.REACT_APP_FETCH_URL,{
         method: 'POST',  
         body: bgColor,
       });
@@ -64,8 +62,8 @@ export default function App() {
           cardRef.current.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        const errorMessage = await response.statusText(); 
-        setErrorMessage(errorMessage);
+        const errorResponse = await response.json(); 
+        setErrorMessage(errorResponse["error"]);
       }}
        catch (error) {
         setErrorMessage(`Fetch error: ${error.message}`);
