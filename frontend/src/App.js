@@ -11,14 +11,20 @@ export default function App() {
   const colorPickerRef = React.useRef(null);
   const colorPickerInitialized = React.useRef(false); 
   const [colorPicker, setColorPicker] = React.useState(null);
-  const [bgColor, setBgColor] = React.useState("#ffc069");
-  const [errorMessage, setErrorMessage] = React.useState('');
+  const [bgColor, setBgColor] = React.useState("#f7f7ed");
+
+  React.useEffect(() => {
+    const page = document.getElementById('page')
+    if(page) {
+      page.classList.add('fade-in')
+    }
+  }, []);
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
         width: 250,
-        color: "#f00",
+        color: "#f7f7ed",
         margin: 20,
         wheelLightness: false,
         borderWidth: 2,
@@ -59,7 +65,7 @@ export default function App() {
     }
 
   return (
-    <div>
+    <div id="page">
       <Header />
       <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card answer={answer} />
