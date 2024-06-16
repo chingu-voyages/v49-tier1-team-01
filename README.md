@@ -1,38 +1,52 @@
-# voyage-tasks
+# HueHarmony
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+HueHarmony is a color recommendation tool that utilizes the OpenAI API to suggest complementary colors based on a user's input. Whether you're designing a website, creating artwork, or simply looking for color inspiration, HueHarmony helps you discover harmonious color palettes effortlessly.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+## Overview
+HueHarmony simplifies the process of finding complementary colors by leveraging the power of artificial intelligence. Users can input a base color of their choice through the website interface, and HueHarmony will generate a selection of recommended colors that pair well with the chosen hue. This tool is invaluable for designers, artists, and anyone seeking aesthetically pleasing color combinations.
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## Key Features
+- Color Recommendation: Input any color, and HueHarmony will provide a curated list of complementary colors to enhance your design or artwork.
 
-> Own it & Make it your Own!
+- OpenAI Integration: HueHarmony utilizes the OpenAI API to analyze color relationships and generate intelligent color suggestions based on advanced algorithms.
 
-## Team Documents
+- User-Friendly Interface: The website features a clean and intuitive interface, making it easy for users to select colors and view recommendations.
 
-You may find these helpful as you work together to organize your project.
+## Table of Contents
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+- [Installation](#installation)
+- [Team](#Team)
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+## Installation
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+### Setup Frontend
+```bash
+# Navigate to the frontend directory
+cd frontend
 
-## Our Team
+# Install dependencies
+npm install
+```
+### Setup Backend
+```bash
+# Navigate to the backend directory
+cd backend
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
+# Install dependencies
+npm install
+```
+
+## Setup OpenAI API key:
+
+Create .env file
+Copy paste code from the .env.dist file:
+
+```cp .env.dist .env```
+
+Replace "your open api key" with your real OpenAI API key
+
+
+## Team
 
 - Krishna Yadav (Developer): [GitHub](https://github.com/Yadav97) / [LinkedIn](https://www.linkedin.com/in/krishna-yadav97/)
 - Sebin Hong (Developer): [GitHub](https://github.com/subsurfmodifier) / [LinkedIn](linkedin.com/in/sebin-hong-867b56291)
