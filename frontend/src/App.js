@@ -13,6 +13,7 @@ export default function App() {
   const [colorPicker, setColorPicker] = React.useState(null);
   const [slidedown, setSlidedown] = React.useState(false);
   const cardRef = React.useRef(null);
+  const scrollToNextSectionRef = React.useRef(null);
   const [bgColor, setBgColor] = React.useState("#f7f7ed");
   const [errorMessage, setErrorMessage] = React.useState('');
 
@@ -22,9 +23,6 @@ export default function App() {
       page.classList.add('fade-in')
     }
   }, []);
-
-  const scrollToNextSectionRef = React.useRef("null");
-
 
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
@@ -76,14 +74,10 @@ export default function App() {
     }
 
    function onClickScroll(){
-      console.log("hi this is from the onCickScroll");
+      console.log(scrollToNextSectionRef);
       if (scrollToNextSectionRef.current) {
        scrollToNextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
       }
-      console.log(document.getElementById("newHead"));
-      // document.getElementById("newHead")
-      
-
     }
 
   return (
