@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default function MainContent(props) {
   return (
     <div className="bg-color-wheel-container-xs-mx-0" style={{backgroundColor : props.backgroundColor}}>

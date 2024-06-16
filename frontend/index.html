@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom-Out Effect</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+   <style>
+    /* Initial state of the heading */
+.zoom-out {
+  animation: zoomOut 1s reverse; /* 2 seconds duration */
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(2); /* Start at 2x size */
+    opacity: 1;          /* Start fully transparent */
+  }
+  to {
+    transform: scale(1); /* End at normal size */
+    opacity: 0;          /* End fully opaque */
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+   </style>
+
+</head>
+<body>
+  <header>
+    <h1 id="main-heading" class="zoom-out">Welcome to My Website</h1>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>

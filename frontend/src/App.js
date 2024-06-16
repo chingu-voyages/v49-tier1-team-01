@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from './components/header';
 import MainContent from './components/main-content';
 import iro from '@jaames/iro';
@@ -23,11 +23,16 @@ export default function App() {
     }
   }, []);
 
+  const scrollToNextSectionRef = React.useRef("null");
+
+
   React.useEffect(() => {
     if (colorPickerRef.current && !colorPickerInitialized.current) {
       const newColorPicker = new iro.ColorPicker(colorPickerRef.current, {
+
         width: 250,
         color: "#f7f7ed",
+
         margin: 20,
         wheelLightness: false,
         borderWidth: 2,
@@ -69,12 +74,22 @@ export default function App() {
         setErrorMessage(`Fetch error: ${error.message}`);
       }
     }
-  
+
+   function onClickScroll(){
+      console.log("hi this is from the onCickScroll");
+      if (scrollToNextSectionRef.current) {
+       scrollToNextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+      console.log(document.getElementById("newHead"));
+      // document.getElementById("newHead")
+      
+
+    }
 
   return (
     <div id="page">
-      <Header />
-      <MainContent backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
+      <Header onClickScroll={onClickScroll} />
+      <MainContent scrollToNextSectionRef={scrollToNextSectionRef} backgroundColor={bgColor} colorPicker={colorPickerRef} button={handleButtonClick} />
       <Card ref={cardRef} answer={answer} className={`slide-down ${slidedown ? 'expanded' : ''}`}  />
       <ErrorWindow errorMessage={errorMessage}/>
       <Footer backgroundColor={bgColor} />
